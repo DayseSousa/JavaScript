@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-30/10</title>
+</head>
+<body>
+    <H1>JavaScript-30/10/2023</H1>
+    <label for="id_n1">Primeiro número:</label>
+    <input type="text" id="id_n1">
+    <br>
+    <label for="id_n2">Segundo número:</label>
+    <input type="text" id="id_n2"> 
+    <br>
+    <label for="operacao">Selecione a operação:</label>
+    <select id="operação:" name="operação">
+        <option></option>
+        <option value="Soma">Soma</option>
+        <option value="Subtracao">Subtração</option>
+        <option value="Multiplicacao">Multiplicação</option>
+        <option value="Divisao">Divisão</option>
+    </select>
+    <br>
+    <p>Resultado: <input type="text" id="id_resultado" disabled></p>
+    
+
+<script>
+    let select = document.querySelector('select');
+    select.addEventListener('change', function(){
+        let value = select.value;
+        if (value === 'Soma') {
+            soma();
+        } else if (value === 'Subtracao') {
+            Subtracao();
+        }
+    });
+    function soma() {
+        var n1 = parseInt(document.getElementById("id_n1").value);
+        var n2 = parseInt(document.getElementById("id_n2").value);
+        var soma = n1+n2;
+        document.getElementById("id_resultado").value= soma;
+    }
+    function Subtracao() {
+        var n1 = parseInt(document.getElementById("id_n1").value);
+        var n2 = parseInt(document.getElementById("id_n2").value);
+        var Subtracao = n1-n2;
+        document.getElementById("id_resultado").innerHTML= Subtracao;
+    }
+    function Multiplicacao() {
+        var n1 = parseInt(document.getElementById("id_n1").value);
+        var n2 = parseInt(document.getElementById("id_n2").value);
+        var Multiplicacao = n1*n2;
+        document.getElementById("id_resultado").innerHTML= Multiplicacao;
+    }
+    function Divisao() {
+        var n1 = parseInt(document.getElementById("id_n1").value);
+        var n2 = parseInt(document.getElementById("id_n2").value);
+        var Divisao= n1/n2;
+        document.getElementById("id_resultado").innerHTML= Divisao;
+    }
+
+
+</script>
+
+</body>
+</html>

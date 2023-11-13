@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+     <style>
+        body {
+            background-image: url(data:image/jpeg;base64,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);
+            background-size: cover;  
+            
+        }
+        body {
+            font-size: 20px;
+        }
+        
+         table {
+  border-collapse: solid;
+  border-spacing: 12;
+  width: 40%;
+}
+
+th, td {
+  border: 1px solid  black;
+  padding: 5px;
+}
+h1 {
+    text-align: center;
+}
+p {
+    text-indent: 25px;
+}
+#situacao { font-weight: bold; }
+  .normal { color: green; }
+  .alerta { color: orange; }
+  .perigo { color: red; }
+     </style>
+    
+</head>
+<body>
+<h1>Índice de Massa Corporal-IMC</h1>
+<p>O índice de massa corporal (IMC) é uma medida internacional usada para calcular se uma pessoa está no peso ideal. </p>
+<h3>Como Calcular:</h3>
+<p>O IMC é determinado pela divisão da <span style="color: blue;">massa</span> do indivíduo pelo quadrado de sua altura, em que a massa está em  <span style="color: blue;">quilogramas</span><br> e a altura em <span style="color: blue;">metros.</span></p>
+ <br>
+ <p>
+    Peso (kg): <input type="number" id="peso" step="any" />
+    Altura (m): <input type="number" id="altura" step="any" />
+    <button onclick="calcularIMC()">Calcular IMC</button>
+  </p>
+  
+  <p>Seu IMC: <span id="valorIMC"></span></p>
+  <p>Situação: <span id="situacao"></span></p>
+  
+  <script>
+    function calcularIMC() {
+      var peso = parseFloat(document.getElementById("peso").value);
+      var altura = parseFloat(document.getElementById("altura").value);
+      var imc = peso / (altura * altura);
+      var situacao = document.getElementById("situacao");
+      var valorIMC = document.getElementById("valorIMC");
+  
+      valorIMC.innerHTML = imc.toFixed(2);
+  
+      if (imc < 18.5) {
+        situacao.innerHTML = "Abaixo do peso";
+        situacao.className = "alerta";
+      } else if (imc >= 18.5 && imc <= 24.9) {
+        situacao.innerHTML = "Normal";
+        situacao.className = "normal";
+      } else if (imc >= 25 && imc <= 29.9) {
+        situacao.innerHTML = "Acima do peso";
+        situacao.className = "alerta";
+      } else if (imc >= 30 && imc <= 34.9) {
+        situacao.innerHTML = "Obesidade I";
+        situacao.className = "perigo";
+      } else if (imc >= 35 && imc <= 39.9) {
+        situacao.innerHTML = "Obesidade II";
+        situacao.className = "perigo";
+      } else {
+        situacao.innerHTML = "Obesidade III";
+        situacao.className = "perigo";
+      }
+    }
+  </script>
+ 
+    <table style="background-color: azure;">
+        <th colspan="2">Tabela do IMC</th>
+           <tr> 
+            <th>Resultado</th>
+            <th>Situação</th>
+          </tr>
+          <tr>
+            <td style="color: orange;"> 17</td>
+            <td style="color: orange;">Muito abaixo do peso</td>
+          </tr>
+          <tr>
+            <td style="color: orange;">17 ≤ Resultado ≤ 18,49</td>
+            <td style="color: orange;">Abaixo do peso</td>
+          </tr>
+          <tr>
+            <td style="color: green;">18,50 ≤ Resultado ≤ 24,99</td>
+            <td style="color: green;">Peso normal</td>
+          </tr>
+          <tr>
+            <td style="color: red;">25 ≤ Resultado ≤ 29,99</td>
+            <td style="color: red;">Acima do peso</td>
+          </tr>
+          <tr>
+            <td style="color: red;">30 ≤ Resultado ≤ 34,99</td>
+            <td style="color: red;">Obesidade I</td>
+          </tr>
+          <tr>
+            <td style="color: red;">35 ≤ Resultado ≤ 39,99</td>
+            <td style="color: red;">Obesidade II (severa)</td>
+          </tr>
+          <tr>
+            <td style="color: red;">≥ 40</td>
+            <td style="color: red;">Obesidade III (mórbida)</td>
+          </tr>
+      </table>
+  
+    
+</body>
+</html>
+    

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT</title>
+</head>
+<body>
+      
+     <h1>JavaScript</h1>
+    <label for="id_n1">Primeiro número:</label>
+    <input type="text" id="id_n1">
+    <br>
+    <label for="id_n2">Segundo número:</label>
+    <input type="text" id="id_n2"> 
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    <p>Resultado: <input type="text" id="id_resultado" disabled></p>
+    
+    <script>
+        function calcular() {
+            var n1 = parseInt(document.getElementById("id_n1").value);
+            var n2 = parseInt(document.getElementById("id_n2").value);
+            var soma = n1+n2;
+            document.getElementById("id_resultado").value= soma;
+        }
+    </script>
+    <h3>Impotante!</h3>
+    <ol>
+        <li><span style="color: red">.value</span> vai pegar o valor que está dentro da caixa.</li>
+        <li><span style="color: red;">innerHTML</span>Vai substituir o conteúdo do HTML pelo que está na função.</li>
+        <li><span style=" color: red;"> button</span> Cria um botão que traz a função.</li>
+        <li><span style="color: red;"> parseInt</span>É</li>
+        <li> <span style="color: red;">.getElementById</span>É</li>
+    </ol>
+
+   
+    
+</body>
+</html>
